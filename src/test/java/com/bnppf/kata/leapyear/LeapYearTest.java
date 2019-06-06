@@ -23,7 +23,7 @@ public class LeapYearTest {
 
 	@ParameterizedTest
 	@ValueSource(ints = { 2015, 2018, 2019 })
-    public void whenNotDivisibleBy4ThenNonLeapYear(int year) {
+	public void whenNotDivisibleBy4ThenNonLeapYear(int year) {
 		assertFalse(leapYear.isLeapYear(year));
 	}
 
@@ -32,7 +32,7 @@ public class LeapYearTest {
 	public void whenDivisibleBy100ButNotBy400ThenNonLeapYear(int year) {
 		assertFalse(leapYear.isLeapYear(year));
 	}
-	
+
 	@ParameterizedTest
 	@ValueSource(ints = { 2000, 2400 })
 	public void whenDivisibleBy400ThenLeapYear(int year) {

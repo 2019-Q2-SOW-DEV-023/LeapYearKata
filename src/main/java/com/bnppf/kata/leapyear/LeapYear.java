@@ -7,7 +7,7 @@ import static com.bnppf.kata.leapyear.DivisionBase.HUNDRED;
 public class LeapYear {
 
 	public boolean isLeapYear(int year) {
-		return isMultipleOf4(year) && (isNotMiltipleOf100(year) ||  isMiltipleOf400(year));
+		return isMultipleOf4(year) && (isNotMiltipleOf100(year) || isMiltipleOf400(year));
 	}
 
 	private boolean isMiltipleOf400(int year) {
@@ -21,7 +21,7 @@ public class LeapYear {
 	private boolean isMultipleOf4(int year) {
 		return isMultipleOf(year, FOUR);
 	}
-	
+
 	private boolean isMultipleOf(int year, DivisionBase base) {
 		return year % base.getBase() == 0;
 	}
