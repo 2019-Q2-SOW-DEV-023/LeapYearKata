@@ -2,6 +2,7 @@ package com.bnppf.kata.leapyear;
 
 import static com.bnppf.kata.leapyear.DivisionBase.FOUR;
 import static com.bnppf.kata.leapyear.DivisionBase.FOUR_HUNDRED;
+import static com.bnppf.kata.leapyear.DivisionBase.FOUR_THOUSAND;
 import static com.bnppf.kata.leapyear.DivisionBase.HUNDRED;
 
 public class LeapYear {
@@ -12,7 +13,7 @@ public class LeapYear {
 	}
 
 	private boolean isNotMiltipleOf4000(int year) {
-		return year % 4000 != 0;
+		return !isMultipleOf(year, FOUR_THOUSAND);
 	}
 
 	private boolean isMiltipleOf400(int year) {
