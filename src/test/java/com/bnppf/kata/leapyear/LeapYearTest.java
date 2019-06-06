@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class LeapYearTest {
 	private LeapYear leapYear;
@@ -13,19 +15,20 @@ public class LeapYearTest {
 	public void setUp() throws Exception {
 		leapYear = new LeapYear();
 	}
-	
+
 	@Test
 	public void when2016ThenLeapYear() {
 		assertTrue(leapYear.isLeapYear(2016));
 	}
-	
+
 	@Test
 	public void when2015ThenNonLeapYear() {
 		assertFalse(leapYear.isLeapYear(2015));
 	}
-	
-	@Test
-	public void when1700ThenNonLeapYear() {
-		assertFalse(leapYear.isLeapYear(1700));
+
+	@ParameterizedTest
+	@ValueSource(ints = { 1700, 1800, 1900, 2100 })
+	public void whenDivisibleBy100ButNotBy400ThenNonLeapYear(int year) {
+		assertFalse(leapYear.isLeapYear(year));
 	}
 }
