@@ -1,8 +1,8 @@
-##Leap Years##
+## Leap Years
 
 This application checks if a year is a leap year, so that there is an extra day as February 29 and total 366 days in those years.
 
-####Acceptance Criteria:####
+#### Acceptance Criteria:
 
 1. All years divisible by 400 are leap years (example, 2000 was a leap year)
 2. All years divisible by 100 but not by 400 are NOT leap years (example, 1700, 1800, 1900, 2100 are not leap years)
@@ -13,7 +13,7 @@ This application checks if a year is a leap year, so that there is an extra day 
 
 1. All years divisible by 4000 are NOT leap years
 
-####Running the tests:####
+#### Running the tests:
 
 **From command prompt:**
 
@@ -27,7 +27,7 @@ This application checks if a year is a leap year, so that there is an extra day 
 
 2. Run As Maven test
 
-####Running the test coverage:####
+#### Running the test coverage:
 
 1. From cmd, navigate to the project directory, run "mvn clean verify"  
 OR,  
@@ -38,7 +38,7 @@ This is the HTML report of the coverage, can be opened in any browser
 [Note: Main class LeapYearLauncher is not covered by any test case]
 
 
-####Launching the application:####
+#### Launching the application:
 
 From IDE, launch the Main class: LeapYearLauncher.java with arguments as years.
 It accepts multiple years separated by space. 
